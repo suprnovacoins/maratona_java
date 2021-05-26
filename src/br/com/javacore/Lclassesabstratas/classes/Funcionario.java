@@ -1,7 +1,6 @@
 package br.com.javacore.Lclassesabstratas.classes;
 
-public abstract class Funcionario {
-    protected String nome;
+public abstract class Funcionario extends Pessoa {
     protected String clt;
     protected double salario;
 
@@ -21,6 +20,11 @@ public abstract class Funcionario {
                 ", clt='" + clt + '\'' +
                 ", salario=" + salario +
                 '}';
+    }
+
+    @Override
+    public void imprime() {
+        System.out.println("Dentro do imprime de funcionario");
     }
 
     public abstract void calculaSalario();
