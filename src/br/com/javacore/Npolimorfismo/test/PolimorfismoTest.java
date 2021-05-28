@@ -14,7 +14,7 @@ public class PolimorfismoTest {
 //        relatorio.relatorioPagamentoVendedor(v);
 
         relatorio.relatorioPagamentoGenerico(g);
-        System.out.println("------------------------");
-        relatorio.relatorioPagamentoGenerico(v);
+//        System.out.println("------------------------");
+//        relatorio.relatorioPagamentoGenerico(v);
     }
 }
