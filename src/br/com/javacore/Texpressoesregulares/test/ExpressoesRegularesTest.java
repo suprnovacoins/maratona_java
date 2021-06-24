@@ -12,8 +12,9 @@ public class ExpressoesRegularesTest {
         // \w - caracteres de palavras a-z A-Z, digitos e _
         // \W - tudo o que nao for caractere de palavra
 
-        String regex = "\\d";
-        String texto = "abcd54efa5baaa458b";
+        int hex = 0x1;
+        String regex = "0[xX] [0-9a-fA-F]";
+        String texto = "12 0x 0X 0xFFABC 0x10G 0x1";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("Texto: "+texto);
@@ -21,7 +22,7 @@ public class ExpressoesRegularesTest {
         System.out.println("Expressao: "+matcher.pattern());
         System.out.println("posicoes encontradas");
         while (matcher.find()){
-            System.out.println(matcher.start()+" ");
+            System.out.println(matcher.start()+" "+matcher.group());
         }
 
     }
