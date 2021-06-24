@@ -5,8 +5,15 @@ import java.util.regex.Pattern;
 
 public class ExpressoesRegularesTest {
     public static void main(String[] args) {
-        String regex = "ab";
-        String texto = "abcdefabaaab";
+        // \d - todos os digitos
+        // \D - tudo que nao for digito
+        // \s - espacos em branco \t \n \f \r
+        // \S - caractere que nao e branco
+        // \w - caracteres de palavras a-z A-Z, digitos e _
+        // \W - tudo o que nao for caractere de palavra
+
+        String regex = "\\d";
+        String texto = "abcd54efa5baaa458b";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         System.out.println("Texto: "+texto);
