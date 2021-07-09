@@ -13,7 +13,7 @@ public class ConsoleTest {
         String texto;
         while(true){
             texto = c.readLine("%s, Digite: ");
-            c.format("esse texto %s foi digitafo", retorno(texto))
+            c.format("esse texto %s foi digitafo", retorno(texto));
         }
 
     }
