@@ -1,4 +1,4 @@
-package br.com.javacore.Aintroducaoclasses;
+package br.com.javacore.Aintroducaoclasses.classes;
 
 public class BibliotecaTest {
 
