@@ -53,6 +53,7 @@ public class AtributosBasicosTest {
         FileTime lastAcess = FileTime.fromMillis(System.currentTimeMillis());
         BasicFileAttributeView basicView = Files.getFileAttributeView(path, BasicFileAttributeView.class );
         basicView.setTimes(lastModified,lastAcess,created);
+        atributosBasicos = Files.readAttributes(path, BasicFileAttributes.class);
         System.out.println("Create: "+atributosBasicos.creationTime());
         System.out.println("Last acess: "+atributosBasicos.lastAccessTime());
         System.out.println("Last modified: "+atributosBasicos.lastModifiedTime());
