@@ -1,5 +1,7 @@
 package br.com.javacore.Zcolecoes.classes;
 
+import java.util.Objects;
+
 public class Celular {
     private String nome;
     private String IMEI;
@@ -16,6 +18,18 @@ public class Celular {
     //Consistente x.equals(y) deve sempre retornar o mesmo valor
     //para x diferente de null x.equals(null) tem que retornar false
 
+    //Para hashCode
+    //se x.equals(y) == true y.hashCode() == x.hashCode();
+    //y.hashCode() == x.hashCode() nao necessariamente o equals devera retornar true
+    //x.hashCode(y) == false
+    //y.hashCode() != x.hashCode() x.equals(y) devera ser false
+
+
+
+    @Override
+    public int hashCode() {
+        return IMEI != null ? IMEI.hashCode() : 1;
+    }
 
     @Override
     public boolean equals(Object obj) {
