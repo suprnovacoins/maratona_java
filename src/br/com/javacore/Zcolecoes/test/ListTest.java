@@ -16,6 +16,7 @@ public class ListTest {
         System.out.println("size: " + nomes.size());
         System.out.println(nomes.remove("devdojo"));
         System.out.println("size: " + nomes.size());
+        nomes.clear();
         nomes.addAll(nomes2);
         int size = nomes.size();
         for (int i = 0; i < size; i++) {
