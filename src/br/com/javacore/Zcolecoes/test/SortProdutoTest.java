@@ -17,10 +17,10 @@ public class SortProdutoTest {
         List<Produto> produtos = new ArrayList<>();
         Produto[] produtosArray = new Produto[4];
 
-        Produto produto1 = new Produto("123","Lenovo Notebook", 3500.00);
-        Produto produto2 = new Produto("321","Picanha", 20.00);
-        Produto produto3 = new Produto("879","Teclado Razer", 1000.00);
-        Produto produto4 = new Produto("012","Samsung S7", 3450.00);
+        Produto produto1 = new Produto("123","Lenovo Notebook", 3500.00,1);
+        Produto produto2 = new Produto("321","Picanha", 20.00,1);
+        Produto produto3 = new Produto("879","Teclado Razer", 1000.00,1);
+        Produto produto4 = new Produto("012","Samsung S7", 3450.00,1);
         produtos.add(produto1);
         produtos.add(produto2);
         produtos.add(produto3);

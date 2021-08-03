@@ -6,15 +6,17 @@ public class Produto implements Comparable<Produto>{
     private String serialNumber;
     private String nome;
     private double preco;
+    private Integer quantidade;
 
     public Produto(){
 
     }
 
-    public Produto(String serialNumber, String nome, double preco) {
+    public Produto(String serialNumber, String nome, double preco,Integer quantidade) {
         this.serialNumber = serialNumber;
         this.nome = nome;
         this.preco = preco;
+        this.quantidade = quantidade;
     }
 
     public String getSerialNumber() {
@@ -54,12 +56,21 @@ public class Produto implements Comparable<Produto>{
         this.preco = preco;
     }
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
     @Override
     public String toString() {
         return "Produto{" +
                 "serialNumber='" + serialNumber + '\'' +
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +
+                ", quantidade=" + quantidade +
                 '}';
     }
 
@@ -68,4 +79,6 @@ public class Produto implements Comparable<Produto>{
         Double d = preco;
         return d.compareTo(outroProduto.getPreco());
     }
+
+
 }
